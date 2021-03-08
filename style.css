@@ -1,0 +1,41 @@
+#header {
+  display: flex;
+}
+.half {
+  width: 50%;
+}
+.inline {
+  padding: 0 20px;
+  display: inline; 
+}
+
+.leftHalf {
+    margin-top: 1em;
+}
+
+.rightHalf {
+  margin-top: 1em;
+  text-align: right;
+}
+.foodFrame{
+  text-align: center;
+  background-color:lightgray;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+#foodItem{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+
+}
+#foodIngredient{
+  width: 450px;
+  margin: 30px auto 80px auto;
+  background-color:lightgray ;
+  border-radius: 15px;
+}
+
+.text{
+  padding-left: 100px;
+}
