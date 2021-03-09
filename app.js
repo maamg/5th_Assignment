@@ -43,8 +43,8 @@ const Instruction = item => {
     
     const info1 = `
         <div id='ingredientDiv'>
-        <img src='${img}' style='width: 450px; height: 300px'> 
-        <h3 style= 'width: 450px;' class='text' class='text'> ${name}</h3>
+        <img src='${img}' style='width: 450px; height: 300px '> 
+        <h3 style= 'width: 450px; text-align: center'> ${name}</h3>
         <h5 class='text'> Ingredient</h5>
         <p class='text'>${item.strIngredient1}</p>
         <p class='text'>${item.strIngredient2}</p>
