@@ -7,30 +7,25 @@ const foodSearch = foodCode => {
 }
 
 const foodDisplay = foodName => {
-    // condition statement ??
-    if (Object.keys(foodName.meals).length > 0) {
-        const foodName1 = foodName.meals;
-        let foodFrame = document.getElementById('foodItem');
-        let foodIngredient = document.getElementById('foodIngredient');
-        foodFrame.innerHTML = '';
-        foodName1.forEach(eachFood => {
-            const name = eachFood.strMeal;
-            const image = eachFood.strMealThumb;
-            const foodFrameTem = document.createElement('div');
-            foodFrameTem.innerHTML = '';
-            const info = ` <div onclick= "singleItem('${name}')" >
-            <img  src='${image}' style='width: 250px;'>
-            <h5> ${name}</h5>
-            </div>
-            `;
-            foodFrameTem.innerHTML = info;
-            foodIngredient.innerHTML ='';
-            foodFrameTem.className = 'foodFrame';
-            foodFrame.appendChild(foodFrameTem);
-        });
-    } 
-
-  
+    const foodName1 = foodName.meals;
+    let foodFrame = document.getElementById('foodItem');
+    let foodIngredient = document.getElementById('foodIngredient');
+    foodFrame.innerHTML = '';
+    foodName1.forEach(eachFood => {
+        const name = eachFood.strMeal;
+        const image = eachFood.strMealThumb;
+        const foodFrameTem = document.createElement('div');
+        foodFrameTem.innerHTML = '';
+        const info = ` <div onclick= "singleItem('${name}')" >
+        <img  src='${image}' style='width: 250px;'>
+        <h5> ${name}</h5>
+        </div>
+        `;
+        foodFrameTem.innerHTML = info;
+        foodIngredient.innerHTML ='';
+        foodFrameTem.className = 'foodFrame';
+        foodFrame.appendChild(foodFrameTem);
+    });  
 }
 
 const singleItem = parameter => {
@@ -44,7 +39,7 @@ const Instruction = item => {
     const name = item.strMeal;
     const img = item.strMealThumb;
     const foodIngredient = document.getElementById('foodIngredient');
-    foodIngredient.className = 'foodIngredient';
+    foodIngredient.className = 'foodIngredient'
     
     const info1 = `
         <div id='ingredientDiv'>
